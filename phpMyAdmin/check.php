@@ -3,7 +3,7 @@
     $passwd = $_POST['passwd'];
 
     try {
-        $pdo = new PDO("mysql=host:localhost;dbname=memberaccount", "root", "sunny2897");
+        $pdo = new PDO("mysql:host=localhost;dbname=member", "root", "sunny2897");
         $sql = "SELECT * FROM memberaccount WHERE account='{$account}'";
         $stmt = $pdo->query($sql);
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
